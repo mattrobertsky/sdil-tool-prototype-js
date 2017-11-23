@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+  <html lang="en"><!--<![endif]-->
+    <head>
+      <meta charset="utf-8" />
+      <title>Example proto.js usage</title>
+      <script
+            type="text/javascript"
+            src="https://rawgithub.com/mattrobertsky/sdil-tool-prototype-js/master/proto.js"
+            ></script>
+
+    <script>
+      function init() {
+        var lm = new LiabilityModel(100000,true,true,2);
+        document.getElementById("heading").innerHTML = lm.heading();
+        document.getElementById("text").innerHTML = lm.text();
+      }
+    </script>
+    </head>
+    <body onload="init()">
+    <h1 id="heading"></h1>
+    <div id="text"></div>
+    </body>
+  </html>
