@@ -49,7 +49,7 @@ class LiabilityModel {
   }
 
   heading() {
-    return messages.get(outcome());
+    return messages.get(this.outcome());
   }
 
   text() {
