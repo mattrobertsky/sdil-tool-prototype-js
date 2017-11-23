@@ -5,21 +5,25 @@
     <head>
       <meta charset="utf-8" />
       <title>Example proto.js usage</title>
+      <!-- 1. Add this script import -->
       <script
             type="text/javascript"
             src="https://rawgithub.com/mattrobertsky/sdil-tool-prototype-js/master/proto.js"
             ></script>
 
-    <script>
-      function init() {
-        var lm = new LiabilityModel(100000,true,true,2);
-        document.getElementById("heading").innerHTML = lm.heading();
-        document.getElementById("text").innerHTML = lm.text();
-      }
-    </script>
+      <!-- 2. add this function adapting as necessary -->
+      <script>
+        function init() {
+          var lm = new LiabilityModel(100000,true,true,2);
+          document.getElementById("heading").innerHTML = lm.heading();
+          document.getElementById("text").innerHTML = lm.text();
+        }
+      </script>
     </head>
+    <!-- add the init() call to onload of the body tag -->
     <body onload="init()">
-    <h1 id="heading"></h1>
-    <div id="text"></div>
+      <!-- Note that the id element of these tags match the argument passed to getElementById in the init function --> 
+      <h1 id="heading"></h1>
+      <div id="text"></div>
     </body>
   </html>
