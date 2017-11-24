@@ -41,7 +41,7 @@ class LiabilityModel {
   messageKey() {
     if (this.outcome() === "noliability.smallproducer") {
       return this.outcome();
-    } else if (this.litresProduced > 0 && this.litresCopacked > 0 && this.outcome() === "mandatory") {
+    } else if (this.litresProduced > 0 && this.litresCopacked > 0 && this.outcome() === "outcome.mandatory") {
       return this.outcome() + "." + this.negate("import", this.isImporter) + "." + this.negate("copackFor", this.isCopacker);
     } else {
       return this.outcome() + "." + this.size("prod", this.litresProduced) + "." + this.negate("import", this.isImporter) + "." + this.negate("copackFor", this.isCopacker) + "." + this.size("copackBy", this.litresCopacked);
